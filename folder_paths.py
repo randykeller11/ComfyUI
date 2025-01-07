@@ -34,8 +34,13 @@ folder_names_and_paths["classifiers"] = ([os.path.join(models_dir, "classifiers"
 output_directory = os.path.join(os.path.dirname(os.path.realpath(__file__)), "output")
 temp_directory = os.path.join(os.path.dirname(os.path.realpath(__file__)), "temp")
 input_directory = os.path.join(os.path.dirname(os.path.realpath(__file__)), "input")
+user_directory = os.path.join(os.path.dirname(os.path.realpath(__file__)), "user")
 
 filename_list_cache = {}
+
+def get_user_directory():
+    global user_directory
+    return user_directory
 
 if not os.path.exists(input_directory):
     try:
